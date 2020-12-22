@@ -1,0 +1,10 @@
+body {
+  background: gray;
+}
+a {
+  color: gold;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}

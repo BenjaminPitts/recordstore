@@ -27,15 +27,15 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: false}))
 app.use(express.json())
 app.use(methodOverride('_method'))
-// app.use(
-//   session({
-//     secret: process.env.SECRET,
-//     resave: false,
-//     saveUninitialized: false
-//   })
-// )
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+  })
+)
 
-//routes
+//test route
 app.get('/', (req, res)=>{
   res.send('Hello chef!')
 })
