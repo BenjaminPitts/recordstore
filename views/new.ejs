@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <%- include ('../partials/head.ejs') %>
   </head>
   <body>
     new route
+    <form action='/recordstore' method='POST'>
+      Name of Band: <input type='text' name='band' required><br>
+      Name of Album: <input type= 'text' name='album'><br>
+      Genre: <select id='genre' name='genre' required>
+                <option value='metal'>Metal</option>
+                <option value='punk'>Punk</option>
+                <option value='hardcore'>Hardcore</option>
+                <option value='other'>Other</option></select><br>
+      Description: <input type='text' name='description'
+      placeholder='color/condition/etc'><br>
+      Image URL: <input type='text' name='image'><br>
+      Price: <input type='text' name='price' required><br>
+      Seller: <input type='text' name='seller' required
+      placeholder='yourEmailAddress@exaample.com'><br>
+      <input type='submit' value='Post Item'>
+      </form>
+      <a href='/recordstore'>Back To Main Page</a>
+      
   </body>
 </html>

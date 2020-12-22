@@ -35,10 +35,15 @@ app.use(
   })
 )
 
-//test route
-app.get('/', (req, res)=>{
-  res.send('Hello chef!')
-})
+//controllers
+const controller = require('./controllers/items.js')
+app.use(controller)
+
+
+// //test route
+// app.get('/', (req, res)=>{
+//   res.send('Hello chef!')
+// })
 
 //listening PORT
 app.listen(PORT, ()=> console.log('Listening on port:', PORT))

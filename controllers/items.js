@@ -45,8 +45,7 @@ router.get('/recordstore/:id', (req, res)=>{
         // , tabTitle: 'Item',
         // currentUser: req.session.currentUser
       })
-    )
-  }
+  })
 })
 
 //create route

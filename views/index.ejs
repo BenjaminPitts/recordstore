@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+  <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-    index route
+    index route<br>
+    <a href='/recordstore/new'>Make New</a><br>
+    <% for(let i=0; i<item.length; i++) { %>
+      <a href='/recordstore/<%=item[i].id%>'><%=item[i].band %></a>
+      <img src='<%=item[i].image%>'>
+    <% } %>
   </body>
 </html>
