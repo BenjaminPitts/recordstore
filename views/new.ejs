@@ -4,7 +4,7 @@
     <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-    new route
+    <%- include ('../partials/header.ejs') %><br>
     <form action='/recordstore' method='POST'>
       Name of Band: <input type='text' name='band' required><br>
       Name of Album: <input type= 'text' name='album'><br>
@@ -22,6 +22,6 @@
       <input type='submit' value='Post Item'>
       </form>
       <a href='/recordstore'>Back To Main Page</a>
-      
+
   </body>
 </html>

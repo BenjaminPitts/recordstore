@@ -19,8 +19,8 @@ router.get('/recordstore', (req, res)=>{
   Item.find({}, (err, data)=>{
     res.render('index.ejs', {
       item: data
-      // , tabTitle: 'Home Page',
-      // currentUser: req.session.currentUser
+      , tabTitle: 'Home Page',
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -28,10 +28,10 @@ router.get('/recordstore', (req, res)=>{
 //new route
 router.get('/recordstore/new', (req, res)=>{
   res.render('new.ejs',
-  // {
-  //   tabTitle: 'New'
-  // , currentUser: req.session.currentUser
-  // }
+  {
+    tabTitle: 'New'
+  , currentUser: req.session.currentUser
+  }
   )
 })
 
@@ -42,8 +42,8 @@ router.get('/recordstore/:id', (req, res)=>{
       'show.ejs',
       {
         item: data
-        // , tabTitle: 'Item',
-        // currentUser: req.session.currentUser
+        , tabTitle: 'Item',
+        currentUser: req.session.currentUser
       })
   })
 })
@@ -69,8 +69,8 @@ router.get('/recordstore/:id/edit', (req, res)=>{
       'edit.ejs',
       {
         item: data
-        // , tabTitle: 'Edit',
-        // currentUser: req.session.currentUser
+        , tabTitle: 'Edit',
+        currentUser: req.session.currentUser
       }
     )
   })

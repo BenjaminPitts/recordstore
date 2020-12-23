@@ -13,6 +13,7 @@ const MONGODB_URI = process.env.MONGODB_URI
 //mongoose connection statement
 mongoose.connect(MONGODB_URI,
   {
+  useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
@@ -38,12 +39,11 @@ app.use(
 //controllers
 const controller = require('./controllers/items.js')
 app.use(controller)
+const userController = require('./controllers/users.js')
+app.use('/users', userController)
+const sessionController = require('./controllers/sessions.js')
+app.use('/sessions', sessionController)
 
-
-// //test route
-// app.get('/', (req, res)=>{
-//   res.send('Hello chef!')
-// })
 
 //listening PORT
 app.listen(PORT, ()=> console.log('Listening on port:', PORT))

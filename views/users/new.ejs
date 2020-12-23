@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('../../partials/head.ejs') %>
+  </head>
+  <body>
+    Sign Up Form<br>
+    <form action='/users' method='POST'>
+      User Name: <input type='text' name='username' required><br>
+      Password: <input type='password' name='password'><br>
+      <input type='submit' value='submit'>
+      </form>
+    <a href='/recordstore'>Back To Main Page</a>
+  </body>
+</html>

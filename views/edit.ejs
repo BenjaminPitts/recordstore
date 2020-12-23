@@ -4,7 +4,7 @@
     <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-    edit route<br>
+    <%- include ('../partials/header.ejs') %><br>
     Update <%=item.band%><br>
     <form action='/recordstore/<%=item.id%>?_method=PUT' method='POST'>
       Band: <input type='text' name='band' value='<%=item.band%>' required><br>
