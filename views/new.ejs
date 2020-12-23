@@ -5,20 +5,23 @@
   </head>
   <body>
     <%- include ('../partials/header.ejs') %><br>
-    <form action='/recordstore' method='POST'>
+
+
+
+    <form action='/recordstore/' method='POST'>
       Name of Band: <input type='text' name='band' required><br>
       Name of Album: <input type= 'text' name='album'><br>
       Genre: <select id='genre' name='genre' required>
-                <option value='metal'>Metal</option>
-                <option value='punk'>Punk</option>
-                <option value='hardcore'>Hardcore</option>
-                <option value='other'>Other</option></select><br>
+                <option value='metal' id='metal'>Metal</option>
+                <option value='punk' id='punk'>Punk</option>
+                <option value='hardcore' id='hardcore'>Hardcore</option>
+                <option value='other' id='other'>Other</option></select><br>
       Description: <input type='text' name='description'
       placeholder='color/condition/etc'><br>
       Image URL: <input type='text' name='image'><br>
       Price: <input type='text' name='price' required><br>
-      Seller: <input type='text' name='seller' required
-      placeholder='yourEmailAddress@exaample.com'><br>
+      Seller: <input type='text' name='seller'
+      placeholder='yourEmailAddress@exaample.com' required><br>
       <input type='submit' value='Post Item'>
       </form>
       <a href='/recordstore'>Back To Main Page</a>

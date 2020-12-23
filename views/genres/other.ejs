@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('../../partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include ('../../partials/header.ejs') %><br>
+Other Records<br>
+<div class='container'>
+<br>
+<% for(let i=0; i<item.length; i++) { %>
+  <div class='item'>
+  <a href='/recordstore/<%=item[i].id%>'>
+  <img src='<%=item[i].image%>'><br>
+  <%=item[i].band%>-
+    <%=item[i].album%></a>
+  </div>
+<% } %>
+</div>
+<a href='/recordstore'>Back To Main Page</a>
+  </body>
+</html>
