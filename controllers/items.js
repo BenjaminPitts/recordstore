@@ -58,6 +58,17 @@ router.get('/recordstore/hardcore', (req, res)=>{
       })
   })
 })
+//classic route
+router.get('/recordstore/classic', (req, res)=>{
+  Item.find({ genre:'classic' }, (err, data)=>{
+    res.render('genres/classic.ejs',
+      {
+        item: data,
+        tabTitle: 'Classic',
+        currentUser: req.session.currentUser
+      })
+  })
+})
 //other route
 router.get('/recordstore/other', (req, res)=>{
   Item.find({ genre:'other' }, (err, data)=>{
