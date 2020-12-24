@@ -5,21 +5,26 @@
   </head>
   <body>
     <%- include ('../partials/header.ejs') %><br>
-    Update <%=item.band%><br>
+    <h3>Update <%=item.band%>-<%=item.album%></h3><br>
+    <div class='container'>
     <form action='/recordstore/<%=item.id%>?_method=PUT' method='POST'>
       Band: <input type='text' name='band' value='<%=item.band%>' required><br>
       Album: <input type='text' name='album' value='<%=item.album%>'><br>
-      Genre: <select id='genre' name='genre' required>
+      <!-- Genre: <select id='genre' name='genre' required>
                 <option value='metal'>Metal</option>
                 <option value='punk'>Punk</option>
                 <option value='hardcore'>Hardcore</option>
-                <option value='other'>Other</option></select><br>
+                <option value='other'>Other</option></select><br> -->
       Description: <input type='text' name='description' value='<%=item.description%>'><br>
       Image URL: <input type='text' name='image' value='<%=item.image%>'><br>
       Price: <input type='text' name='price' value='<%=item.price%>' required><br>
       Seller: <input type='text' name='seller' value='<%=item.seller%>' required><br>
       <input type='submit' value='Submit Changes'>
-    </form><br>
+    </form>
+  </div><br>
+    <nav class='main'>
       <a href='/recordstore'>Back To Main Page</a>
+    </nav>
+      <br><br><%- include ('../partials/footer.ejs') %>
   </body>
 </html>

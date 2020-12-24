@@ -4,6 +4,7 @@
     <%- include ('../../partials/head.ejs') %>
   </head>
   <body>
+    <div class='main'>
     Sign Up Form<br>
     <form action='/users' method='POST'>
       User Name: <input type='text' name='username' required><br>
@@ -11,5 +12,6 @@
       <input type='submit' value='submit'>
       </form>
     <a href='/recordstore'>Back To Main Page</a>
+  </div>
   </body>
 </html>

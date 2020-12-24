@@ -5,18 +5,22 @@
   </head>
   <body>
     <%- include ('../partials/header.ejs') %><br>
-    <img src='<%=item.image %>'><br>
+    <div class='container'>
+    <img src='<%=item.image %>'><span>
     Band: <%= item.band %><br>
     Album: <%= item.album %><br>
     Genre: <%= item.genre %><br>
     Description: <%= item.description %><br>
     Price: $<%= item.price %><br>
-    Seller: <%= item.seller %><br><br>
-
+    Seller: <%= item.seller %></span><br><br>
+  </div><br>
+  <nav class='main'>
 <a href='/recordstore/<%= item.id %>/edit'>Edit Post</a>
-<form action='/recordstore/<%= item.id %>?_method=DELETE' method='POST'>
+<form action='/recordstore/<%= item.id %>?_method=DELETE' method='POST' class='none'>
   <input type='submit' value='Delete Post'>
 </form>
 <a href='/recordstore'>Back To Main Page</a>
+</nav>
+<br><br><%- include ('../partials/footer.ejs') %>
   </body>
 </html>

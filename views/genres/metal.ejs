@@ -4,19 +4,26 @@
     <%- include ('../../partials/head.ejs') %>
   </head>
   <body>
-    <%- include ('../../partials/header.ejs') %><br>
-Metal Records<br>
+    <%- include ('../../partials/header.ejs') %>
+<h3>Metal Records</h3>
+<div class='new'>
+<a href='/recordstore/new'>Post New</a>
+</div>
+<br>
 <div class='container'>
 <br>
 <% for(let i=0; i<item.length; i++) { %>
   <div class='item'>
   <a href='/recordstore/<%=item[i].id%>'>
   <img src='<%=item[i].image%>'><br>
-  <%=item[i].band%>-
+  <%=item[i].band%>-<br>
     <%=item[i].album%></a>
   </div>
 <% } %>
-</div>
+</div><br>
+<nav class='main'>
 <a href='/recordstore'>Back To Main Page</a>
+</nav>
+<br><br><%- include ('../../partials/footer.ejs') %>
   </body>
 </html>

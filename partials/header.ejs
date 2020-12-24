@@ -1,13 +1,21 @@
 <header>
+  <div class='main'>
+    <div class='new'>
+  <h1>Heavy Metal <i>Record</i> Store</h1>
+  </div>
+  <div class='new'>
   <% if (currentUser) { %>
     Welcome, <%= currentUser.username %><br>
-    <form action='/sessions?_method=DELETE' method='POST'>
+    <form action='/sessions?_method=DELETE' method='POST' class='none'>
       <input type='submit' value='Log Out'>
     </form>
 
     <% } else { %>
-      <a href='/users/new'>Sign Up</a><br>
+      <a href='/users/new'>Sign Up</a>| |<br>
       <a href='/sessions/new'>Log In</a>
 
   <% } %>
+
+  </div>
+  </div>
 </header>

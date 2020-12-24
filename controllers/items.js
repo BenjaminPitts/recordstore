@@ -75,7 +75,7 @@ router.get('/recordstore/new', (req, res)=>{
   res.render('new.ejs',
   {
     item: data,
-    tabTitle: 'New',
+    tabTitle: 'Post New',
     currentUser: req.session.currentUser
     })
   })
@@ -88,7 +88,7 @@ router.get('/recordstore/:id', (req, res)=>{
       'show.ejs',
       {
         item: data,
-        tabTitle: 'Item',
+        tabTitle: data.band,
         currentUser: req.session.currentUser
       })
   })

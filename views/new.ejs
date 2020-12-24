@@ -5,9 +5,7 @@
   </head>
   <body>
     <%- include ('../partials/header.ejs') %><br>
-
-
-
+<div class='container'>
     <form action='/recordstore/' method='POST'>
       Name of Band: <input type='text' name='band' required><br>
       Name of Album: <input type= 'text' name='album'><br>
@@ -21,10 +19,13 @@
       Image URL: <input type='text' name='image'><br>
       Price: <input type='text' name='price' required><br>
       Seller: <input type='text' name='seller'
-      placeholder='yourEmailAddress@exaample.com' required><br>
+      placeholder='email@example.com' required><br>
       <input type='submit' value='Post Item'>
-      </form>
+    </form>
+  </div><br>
+  <nav class='main'>
       <a href='/recordstore'>Back To Main Page</a>
-
+    </nav>
+<br><br><%- include ('../partials/footer.ejs') %>
   </body>
 </html>

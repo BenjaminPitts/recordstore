@@ -4,11 +4,13 @@
     <%- include ('../../partials/head.ejs') %>
   </head>
   <body>
+    <div class='main'>
     Log In Form<br>
     <form action='/sessions' method='POST'>
       User Name: <input type='text' name='username'><br>
       Password: <input type='password' name='password'><br>
       <input type='submit' value='Submit'><br>
     <a href='/recordstore'>Back To Main Page</a>
+  </div>
   </body>
 </html>

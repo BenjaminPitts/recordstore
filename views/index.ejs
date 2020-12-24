@@ -4,16 +4,17 @@
   <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-<%- include ('../partials/header.ejs') %>
-    <br>
-    <div class='container'>
+<%- include ('../partials/header.ejs') %><br><br>
 
-    <a href='/recordstore/new'>New Post</a><br><br>
+    <div class='new'><a href='/recordstore/new'>Post New</a></div>
 
-    </div>
-    <a href='/recordstore/metal'>Metal</a><br>
-    <a href='/recordstore/punk'>Punk</a><br>
-    <a href='/recordstore/hardcore'>Hardcore</a><br>
+<div class='new'>
+    <a href='/recordstore/metal'>Metal</a>| |<br>
+    <a href='/recordstore/punk'>Punk</a>| |<br>
+    <a href='/recordstore/hardcore'>Hardcore</a>| |<br>
     <a href='/recordstore/other'>Other</a><br>
+  </div>
+
+    <br><br><%- include ('../partials/footer.ejs') %>
   </body>
 </html>
