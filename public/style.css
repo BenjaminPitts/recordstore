@@ -19,7 +19,8 @@ input:hover, select:hover {
   background: red;
 }
 img {
-  width: 50%;
+  width: 60%;
+  height: auto;
   border: 1px solid gold;
 }
 .container {
