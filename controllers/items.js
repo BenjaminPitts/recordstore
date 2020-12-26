@@ -14,15 +14,27 @@ router.get('/', (req, res)=>{
   res.redirect('/recordstore')
 })
 
-//index route
+//index route-backup index route
+// router.get('/recordstore', (req, res)=>{
+//   res.render('index.ejs',
+// {
+//   // item: data,
+//   tabTitle: 'Home',
+//   currentUser: req.session.currentUser
+// }
+// )
+// })
+
+//index-to post 1 random
 router.get('/recordstore', (req, res)=>{
-  res.render('index.ejs',
-{
-  // item: data,
-  tabTitle: 'Home',
-  currentUser: req.session.currentUser
-}
-)
+  Item.find({}, (err, data)=>{
+    res.render('index.ejs',
+      {
+        item: data,
+        tabTitle: 'Home',
+        currentUser: req.session.currentUser
+      })
+  })
 })
 
 //metal route--added Item.find()
@@ -54,6 +66,17 @@ router.get('/recordstore/hardcore', (req, res)=>{
       {
         item: data,
         tabTitle: 'Hardcore',
+        currentUser: req.session.currentUser
+      })
+  })
+})
+//hip-hop route
+router.get('/recordstore/hiphop', (req, res)=>{
+  Item.find({ genre:'hiphop' }, (err, data)=>{
+    res.render('genres/hiphop.ejs',
+      {
+        item: data,
+        tabTitle: 'Hip Hop',
         currentUser: req.session.currentUser
       })
   })

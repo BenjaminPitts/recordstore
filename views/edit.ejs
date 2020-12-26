@@ -10,11 +10,13 @@
     <form action='/recordstore/<%=item.id%>?_method=PUT' method='POST'>
       Band: <input type='text' name='band' value='<%=item.band%>' required><br>
       Album: <input type='text' name='album' value='<%=item.album%>'><br>
-      <!-- Genre: <select id='genre' name='genre' required>
+      Genre: <select id='genre' name='genre' required>
                 <option value='metal'>Metal</option>
                 <option value='punk'>Punk</option>
                 <option value='hardcore'>Hardcore</option>
-                <option value='other'>Other</option></select><br> -->
+                <option value='hiphop'>Hip Hop</option>
+                <option value='classic'>Classic</option>
+                <option value='other'>Other</option></select><br>
       Description: <input type='text' name='description' value='<%=item.description%>'><br>
       Image URL: <input type='text' name='image' value='<%=item.image%>'><br>
       Price: <input type='text' name='price' value='<%=item.price%>' required><br>

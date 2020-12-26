@@ -6,16 +6,30 @@
   <body>
 <%- include ('../partials/header.ejs') %><br><br>
 
-    <div class='new'><a href='/recordstore/new'>Post New</a></div>
+    <div class='new'><a href='/recordstore/new'>Post New</a><br>
+</div>
 
-<div class='new'>
+<div class='container'>
+      <% for(let i=0; i<item.length; i++) { %>
+
+        <a href='/recordstore/<%=item[i].id%>'>
+        <img src='<%= item[i].image %>' class='randomImg'>
+        </a>
+
+      <% } %>
+</div>
+
+
+    <div class='new'>
     <a href='/recordstore/metal'>Metal</a>| |<br>
     <a href='/recordstore/punk'>Punk</a>| |<br>
     <a href='/recordstore/hardcore'>Hardcore</a>| |<br>
+    <a href='/recordstore/hiphop'>Hip Hop</a>| |<br>
     <a href='/recordstore/classic'>Classic</a>| |<br>
     <a href='/recordstore/other'>Other</a><br>
-  </div>
+    </div>
+    <br><br>
 
-    <br><br><%- include ('../partials/footer.ejs') %>
+    <%- include ('../partials/footer.ejs') %>
   </body>
 </html>
