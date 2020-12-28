@@ -3,7 +3,6 @@ body {
   font-family: 'Grenze Gotisch', cursive;
   color: ivory;
 }
-
 a {
   color: gold;
   text-decoration: none;
@@ -19,7 +18,7 @@ input:hover, select:hover {
   background: red;
 }
 img {
-  width: 60%;
+  width: 50%;
   height: auto;
   border: 1px solid gold;
 }
@@ -29,7 +28,6 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
 }
 .new{
   display: flex;
@@ -62,14 +60,18 @@ img {
   border: none;
   padding: 0;
 }
-.records {
+.top {
   background-image: url(https://i.imgur.com/GV2mcm1.jpg?2);
   background-size: cover;
-  opacity: .6;
+  opacity: .8;
+}
+.bottom {
+    background-image: url(https://i.imgur.com/uhfDwoq.jpg?2);
+    background-size: cover;
+    opacity: .8;
 }
 .randomImg {
   width: 20%;
-  display: none;
 }
 i {
   color: red;
@@ -81,7 +83,7 @@ form {
 }
 h1 {
 padding: 0;
-margin: 0;
+margin: -1rem 0 0 0;
 border-bottom: 1px solid ivory;
 }
 h2, h3{
@@ -94,7 +96,6 @@ span {
   text-align: left;
   font-size: 20px;
 }
-
 header, footer {
   display: flex;
   flex-direction: row;
@@ -111,5 +112,8 @@ header, footer {
   }
   .item {
     width: 100%;
+  }
+  .randomImg {
+    width: 60%;
   }
 }

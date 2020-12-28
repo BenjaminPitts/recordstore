@@ -12,15 +12,17 @@
     Genre: <%= item.genre %><br>
     Description: <%= item.description %><br>
     Price: $<%= item.price %><br>
-    Seller: <%= item.seller %></span><br><br>
-  </div><br>
+    Seller: <a href='mailto:<%= item.seller %>'><%= item.seller %>
+    </a></span><br><br>
+    </div><br>
   <nav class='main'>
 <a href='/recordstore/<%= item.id %>/edit'>Edit Post</a>
 <form action='/recordstore/<%= item.id %>?_method=DELETE' method='POST' class='none'>
   <input type='submit' value='Delete Post'>
 </form>
 <a href='/recordstore'>Back To Main Page</a>
-</nav>
-<br><br><%- include ('../partials/footer.ejs') %>
+  </nav>
+<br><br>
+    <%- include ('../partials/footer.ejs') %>
   </body>
 </html>

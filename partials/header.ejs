@@ -1,4 +1,5 @@
-<div class='records'>
+<div class='top'>
+  <br>
   <br>
   <br>
   <br>
@@ -13,7 +14,7 @@
   </div>
   <div class='new'>
   <% if (currentUser) { %>
-    Welcome, <%= currentUser.username %><br>
+    Welcome, <%= currentUser.username %>
     <form action='/sessions?_method=DELETE' method='POST' class='none'>
       <input type='submit' value='Log Out'>
     </form>

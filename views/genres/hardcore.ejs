@@ -11,18 +11,19 @@
 </div><br>
 <div class='container'>
 <br>
-<% for(let i=0; i<item.length; i++) { %>
-  <div class='item'>
-  <a href='/recordstore/<%=item[i].id%>'>
-  <img src='<%=item[i].image%>'><br>
-  <%=item[i].band%>-<br>
-    <%=item[i].album%></a>
+  <% for(let i=0; i<item.length; i++) { %>
+    <div class='item'>
+      <a href='/recordstore/<%=item[i].id%>'>
+        <img src='<%=item[i].image%>'><br>
+        <%=item[i].band%>-<br>
+        <%=item[i].album%></a>
   </div>
 <% } %>
 </div><br>
 <nav class='main'>
 <a href='/recordstore'>Back To Main Page</a>
 </nav>
-<br><br><%- include ('../../partials/footer.ejs') %>
+<br><br>
+    <%- include ('../../partials/footer.ejs') %>
   </body>
 </html>

@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-  <%- include ('../partials/head.ejs') %>
+    <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-<%- include ('../partials/header.ejs') %><br><br>
-
-    <div class='new'><a href='/recordstore/new'>Post New</a><br>
+    <%- include ('../partials/header.ejs') %><br><br>
+<div class='new'><a href='/recordstore/new'>Post New</a><br>
 </div>
 
 <div class='container'>
-      <% for(let i=0; i<item.length; i++) { %>
-
-        <a href='/recordstore/<%=item[i].id%>'>
-        <img src='<%= item[i].image %>' class='randomImg'>
-        </a>
-
-      <% } %>
+  <%
+      let albums = []
+       for(let i=0; i<item.length; i++) {
+         albums.push(item[i])
+       }
+       let random = albums[(Math.floor(Math.random()*albums.length))]
+  %>
+      I'm Feeling Lucky:
+       <a href='/recordstore/<%= random.id %>'>
+       <img src='<%= random.image %>' class='randomImg'>
+       </a>
 </div>
-
-
     <div class='new'>
     <a href='/recordstore/metal'>Metal</a>| |<br>
     <a href='/recordstore/punk'>Punk</a>| |<br>
@@ -28,8 +29,7 @@
     <a href='/recordstore/classic'>Classic</a>| |<br>
     <a href='/recordstore/other'>Other</a><br>
     </div>
-    <br><br>
-
+    <br>
     <%- include ('../partials/footer.ejs') %>
   </body>
 </html>

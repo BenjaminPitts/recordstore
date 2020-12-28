@@ -14,18 +14,7 @@ router.get('/', (req, res)=>{
   res.redirect('/recordstore')
 })
 
-//index route-backup index route
-// router.get('/recordstore', (req, res)=>{
-//   res.render('index.ejs',
-// {
-//   // item: data,
-//   tabTitle: 'Home',
-//   currentUser: req.session.currentUser
-// }
-// )
-// })
-
-//index-to post 1 random
+//index
 router.get('/recordstore', (req, res)=>{
   Item.find({}, (err, data)=>{
     res.render('index.ejs',
@@ -37,7 +26,7 @@ router.get('/recordstore', (req, res)=>{
   })
 })
 
-//metal route--added Item.find()
+//metal route
 router.get('/recordstore/metal', (req, res)=>{
   Item.find({ genre: 'metal' }, (err, data)=>{
     res.render('genres/metal.ejs',
@@ -92,6 +81,7 @@ router.get('/recordstore/classic', (req, res)=>{
       })
   })
 })
+
 //other route
 router.get('/recordstore/other', (req, res)=>{
   Item.find({ genre:'other' }, (err, data)=>{
@@ -103,8 +93,9 @@ router.get('/recordstore/other', (req, res)=>{
       })
   })
 })
-//new route--added Item.find()
-router.get('/recordstore/new', (req, res)=>{
+
+//new route
+router.get('/recordstore/new', isAuthenticated, (req, res)=>{
   Item.find({}, (err, data)=>{
   res.render('new.ejs',
   {
@@ -116,7 +107,7 @@ router.get('/recordstore/new', (req, res)=>{
 })
 
 //show route
-router.get('/recordstore/:id', (req, res)=>{
+router.get('/recordstore/:id', isAuthenticated, (req, res)=>{
   Item.findById(req.params.id, (err, data)=>{
     res.render(
       'show.ejs',
@@ -129,7 +120,7 @@ router.get('/recordstore/:id', (req, res)=>{
 })
 
 //create route
-router.post('/recordstore/', (req, res)=>{
+router.post('/recordstore/', isAuthenticated, (req, res)=>{
   Item.create(req.body, (err, data)=>{
     res.redirect('/recordstore/')
   })

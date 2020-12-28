@@ -5,8 +5,8 @@
   </head>
   <body>
     <%- include ('../partials/header.ejs') %><br>
-    <h3>Update <%=item.band%>-<%=item.album%></h3><br>
-    <div class='container'>
+    <h3>Edit: <%=item.band%>-<%=item.album%></h3><br>
+  <div class='container'>
     <form action='/recordstore/<%=item.id%>?_method=PUT' method='POST'>
       Band: <input type='text' name='band' value='<%=item.band%>' required><br>
       Album: <input type='text' name='album' value='<%=item.album%>'><br>
@@ -28,6 +28,7 @@
     <nav class='main'>
       <a href='/recordstore'>Back To Main Page</a>
     </nav>
-      <br><br><%- include ('../partials/footer.ejs') %>
+      <br><br>
+      <%- include ('../partials/footer.ejs') %>
   </body>
 </html>

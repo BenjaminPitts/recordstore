@@ -1,3 +1,2 @@
-Recordstore is my 2nd project and was built using HTML, CSS, JS, Node and MongoDB.
-This was my first time using databases and servers to create a functional and
-interactive full-stack application. Users can create an account, log in and create/update/delete content. The content is then accessed by category and has a clean, responsive and mobile-friendly layout.
+Recordstore is my 2nd project and was built using HTML, CSS, JS, Node, Express, Mongoose, Bcrypt and MongoDB.
+This was my first time using databases and servers to create a functional and interactive full-stack application. Users can create an account and log in to create/update/delete content. The content is then accessed by category and has a clean, mobile-friendly layout. There is also a randomly generated album that appears on the index page upon refresh and a link to my other projects in the footer of the page.
