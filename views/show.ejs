@@ -6,12 +6,12 @@
   <body>
     <%- include ('../partials/header.ejs') %><br>
     <div class='container'>
-    <img src='<%=item.image %>'><span>
+    <img src='<%=item.image %>' data-toggle='tooltip' title='<%= item.band %>: <%=item.album %>'><span>
     Band: <%= item.band %><br>
     Album: <%= item.album %><br>
     Genre: <%= item.genre %><br>
     Description: <%= item.description %><br>
-    Price: $<%= item.price %><br>
+    Price <i>(USD)</i>: $<%= item.price %><br>
     Seller: <a href='mailto:<%= item.seller %>'><%= item.seller %>
     </a></span><br><br>
     </div><br>

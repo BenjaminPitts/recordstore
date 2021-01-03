@@ -5,7 +5,7 @@
   </head>
   <body>
     <%- include ('../partials/header.ejs') %><br>
-    <h3>Edit: <%=item.band%>-<%=item.album%></h3><br>
+    <h3><i>Edit:</i><%=item.band%>-<%=item.album%></h3><br>
   <div class='container'>
     <form action='/recordstore/<%=item.id%>?_method=PUT' method='POST'>
       Band: <input type='text' name='band' value='<%=item.band%>' required><br>
@@ -20,7 +20,7 @@
               </select><br> -->
       Description: <input type='text' name='description' value='<%=item.description%>'><br>
       Image URL: <input type='text' name='image' value='<%=item.image%>'><br>
-      Price: <input type='text' name='price' value='<%=item.price%>' required><br>
+      Price <i>(USD)</i>: <input type='text' name='price' value='<%=item.price%>' required><br>
       Seller: <input type='text' name='seller' value='<%=item.seller%>' required><br>
       <input type='submit' value='Submit Changes'>
     </form>

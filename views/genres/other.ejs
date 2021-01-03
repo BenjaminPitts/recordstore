@@ -5,7 +5,7 @@
   </head>
   <body>
     <%- include ('../../partials/header.ejs') %>
-<h3>Other Records</h3>
+<h3>Other <i>Records</i></h3>
 <div class='new'>
 <a href='/recordstore/new'>Post New</a>
 </div><br>
@@ -14,7 +14,7 @@
 <% for(let i=0; i<item.length; i++) { %>
   <div class='item'>
   <a href='/recordstore/<%=item[i].id%>'>
-  <img src='<%=item[i].image%>'><br>
+  <img src='<%=item[i].image%>' data-toggle='tooltip' title='<%= item[i].band %>: <%= item[i].album %>'><br>
   <%=item[i].band%>-<br>
     <%=item[i].album%></a>
   </div>

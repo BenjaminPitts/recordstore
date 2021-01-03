@@ -113,7 +113,7 @@ router.get('/recordstore/:id', isAuthenticated, (req, res)=>{
       'show.ejs',
       {
         item: data,
-        tabTitle: data.band,
+        tabTitle: (data.band + ': ' + data.album),
         currentUser: req.session.currentUser
       })
   })
@@ -139,8 +139,8 @@ router.get('/recordstore/:id/edit', (req, res)=>{
     res.render(
       'edit.ejs',
       {
-        item: data
-        , tabTitle: 'Edit',
+        item: data,
+        tabTitle: ('Edit: ' + data.band + '-' + data.album),
         currentUser: req.session.currentUser
       }
     )
