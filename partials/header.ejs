@@ -12,9 +12,9 @@
     <div class='new'>
   <h1>Counter Culture <i>Records</i></h1>
     </div>
-  <div class='new'>
+  <div class='new' id='top'>
   <% if (currentUser) { %>
-    Welcome, <%= currentUser.username %>
+    Hello, <%= currentUser.username %>
     <form action='/sessions?_method=DELETE' method='POST' class='none'>
       <input type='submit' value='Log Out'>
     </form>

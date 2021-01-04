@@ -16,8 +16,8 @@
        }
        let random = albums[(Math.floor(Math.random()*albums.length))]
   %>
-      I'm Feeling <i>Lucky</i>:
-       <a href='/recordstore/<%= random.id %>'>
+      I'm Feeling Lucky:
+       <a href='/recordstore/<%= random.id %>#top'>
        <img src='<%= random.image %>' class='randomImg' data-toggle='tooltip' title='<%= random.band %>: <%= random.album %>'>
        </a>
 </div>
