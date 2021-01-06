@@ -15,15 +15,17 @@
 <% for(let i=0; i<item.length; i++) { %>
   <div class='item'>
   <a href='/recordstore/<%=item[i].id%>#top'>
-  <img src='<%=item[i].image%>' data-toggle='tooltip' title='<%= item[i].band %>: <%= item[i].album %>'><br>
+  <img src='<%=item[i].image%>' data-toggle='tooltip'
+  title='<%= item[i].band %>: <%= item[i].album %>'
+  alt='<%= item[i].band %>'><br>
   <%=item[i].band%>-<br>
     <%=item[i].album%></a>
   </div>
 <% } %>
 </div><br>
 <nav class='main'>
-  <a href='#top'>Back To Top</a>
-<a href='/recordstore#top'>Back To Main Page</a>
+  <a href='#top' alt='top'>Back To Top</a>
+<a href='/recordstore#top' alt='main'>Back To Main Page</a>
 </nav>
 <br><br>
     <%- include ('../../partials/footer.ejs') %>

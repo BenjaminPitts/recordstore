@@ -8,8 +8,8 @@
     <h3><i>Edit:</i><%=item.band%>-<%=item.album%></h3><br>
   <div class='container'>
     <form action='/recordstore/<%=item.id%>?_method=PUT' method='POST'>
-      Band: <input type='text' name='band' value='<%=item.band%>' required><br>
-      Album: <input type='text' name='album' value='<%=item.album%>'><br>
+      Band: <input type='text' name='band' value='<%=item.band%>' class='placeholder' alt='band' required><br>
+      Album: <input type='text' name='album' value='<%=item.album%>' class='placeholder' alt='album'><br>
       <!-- Genre: <select id='genre' name='genre' required>
                 <option value='metal'>Metal</option>
                 <option value='punk'>Punk</option>
@@ -18,15 +18,15 @@
                 <option value='classic'>Classic</option>
                 <option value='other'>Other</option>
               </select><br> -->
-      Description: <input type='text' name='description' value='<%=item.description%>'><br>
-      Image URL: <input type='text' name='image' value='<%=item.image%>'><br>
-      Price <i>(USD)</i>: <input type='text' name='price' value='<%=item.price%>' required><br>
-      Seller: <input type='text' name='seller' value='<%=item.seller%>' required><br>
-      <input type='submit' value='Submit Changes'>
+      Description: <input type='text' name='description' value='<%=item.description%>' class='placeholder'><br>
+      Image URL: <input type='text' name='image' value='<%=item.image%>' class='placeholder'><br>
+      Price <i>(USD)</i>: <input type='text' name='price' value='<%=item.price%>' class='placeholder' alt='price' required><br>
+      Seller: <input type='text' name='seller' value='<%=item.seller%>' class='placeholder' alt='seller' required><br>
+      <input type='submit' value='Submit Changes' alt='submit'>
     </form>
   </div><br>
     <nav class='main'>
-      <a href='/recordstore#top'>Back To Main Page</a>
+      <a href='/recordstore#top' alt='main'>Back To Main Page</a>
     </nav>
       <br><br>
       <%- include ('../partials/footer.ejs') %>

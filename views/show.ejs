@@ -6,7 +6,7 @@
   <body>
     <%- include ('../partials/header.ejs') %><br>
     <div class='container'>
-    <img src='<%=item.image %>' data-toggle='tooltip' title='<%= item.band %>: <%=item.album %>'><span>
+    <img src='<%=item.image %>' data-toggle='tooltip' title='<%= item.band %>: <%=item.album %>' alt='<%= item.band %>'><span>
     Band: <%= item.band %><br>
     Album: <%= item.album %><br>
     Genre: <%= item.genre %><br>
@@ -16,11 +16,11 @@
     </a></span><br><br>
     </div><br>
   <nav class='main'>
-<a href='/recordstore/<%= item.id %>/edit#top'>Edit Post</a>
+<a href='/recordstore/<%= item.id %>/edit#top' alt='edit'>Edit Post</a>
 <form action='/recordstore/<%= item.id %>?_method=DELETE' method='POST' class='none'>
-  <input type='submit' value='Delete Post'>
+  <input type='submit' value='Delete Post' alt='delete'>
 </form>
-<a href='/recordstore#top'>Back To Main Page</a>
+<a href='/recordstore#top' alt='top'>Back To Main Page</a>
   </nav>
 <br><br>
     <%- include ('../partials/footer.ejs') %>

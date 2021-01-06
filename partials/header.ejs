@@ -16,15 +16,23 @@
   <% if (currentUser) { %>
     Hello, <%= currentUser.username %>
     <form action='/sessions?_method=DELETE' method='POST' class='none'>
-      <input type='submit' value='Log Out'>
+      <input type='submit' value='Log Out' alt='log out'>
     </form>
 
     <% } else { %>
-      <a href='/users/new'>Sign Up</a>| |<br>
-      <a href='/sessions/new'>Log In</a>
+      <a href='/users/new#top' alt='sign up'>Sign Up</a>| |<br>
+      <a href='/sessions/new#top' alt='log in'>Log In</a>
 
   <% } %>
-
   </div>
+
+    <!-- unable to get search bar working
+    <div class='new'>
+      <form action='/recordstore/search' method='GET' class='none'>
+        <input type='text' name='search' placeholder='search for a band...'>
+        <input type='submit' value='Search'>
+      </form>
+    </div> -->
+
   </div>
 </header>

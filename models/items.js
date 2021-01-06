@@ -6,7 +6,7 @@ album: { type: String, required: true },
 genre: { type: String, required: true },
 description: { type: String },
 image: { type: String },
-price: { type: Number, required: true, minimum: 0 },
+price: { type: Number, minimum: 0 },
 seller: { type: String, required: true }
 })
 

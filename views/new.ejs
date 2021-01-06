@@ -7,9 +7,9 @@
     <%- include ('../partials/header.ejs') %><br>
 <div class='container'>
     <form action='/recordstore/' method='POST'>
-      Name of Band: <input type='text' name='band' required><br>
-      Name of Album: <input type= 'text' name='album'><br>
-      Genre: <select id='genre' name='genre' required>
+      Name of Band: <input type='text' name='band' alt='band' required><br>
+      Name of Album: <input type= 'text' name='album' alt='album'><br>
+      Genre: <select id='genre' name='genre' alt='genre' required>
                 <option value='metal' id='metal'>Metal</option>
                 <option value='punk' id='punk'>Punk</option>
                 <option value='hardcore' id='hardcore'>Hardcore</option>
@@ -19,14 +19,15 @@
       Description: <input type='text' name='description'
       placeholder='color/condition/etc'><br>
       Image URL: <input type='text' name='image'><br>
-      Price <i>(USD)</i>: <input type='text' name='price' required><br>
+      Price <i>(USD)</i>: <input type='text' name='price'
+      alt='price' required><br>
       Seller: <input type='text' name='seller'
-      placeholder='email@example.com' required><br>
-      <input type='submit' value='Post Item'>
+      placeholder='email@example.com' alt='seller' required><br>
+      <input type='submit' value='Post Item' alt='submit'>
     </form>
 </div><br>
   <nav class='main'>
-      <a href='/recordstore#top'>Back To Main Page</a>
+      <a href='/recordstore#top' alt='top'>Back To Main Page</a>
   </nav>
 <br><br>
     <%- include ('../partials/footer.ejs') %>

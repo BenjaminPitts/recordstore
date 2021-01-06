@@ -97,8 +97,8 @@ router.get('/recordstore/other', (req, res)=>{
 //new route
 router.get('/recordstore/new', isAuthenticated, (req, res)=>{
   Item.find({}, (err, data)=>{
-  res.render('new.ejs',
-  {
+    res.render('new.ejs',
+    {
     item: data,
     tabTitle: 'Post New',
     currentUser: req.session.currentUser
@@ -151,6 +151,23 @@ router.put('/recordstore/:id', (req, res)=>{
     res.redirect('/recordstore')
   })
 })
+
+//search route--unable to get this working
+// router.get("/recordstore/search", function(req, res) {
+//     if (req.query.search) {
+//        const regex = new RegExp(escapeRegex(req.query.search), 'gi')
+//        Item.find({ 'band': regex }, function(err, data) {
+//            if(err) {
+//                console.log(err)
+//            } else {
+//               res.render('search.ejs', { item: data })
+//            }
+//        })
+//     }
+// })
+// function escapeRegex(text) {
+//     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")
+// };
 
 
 module.exports = router

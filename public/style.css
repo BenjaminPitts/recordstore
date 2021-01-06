@@ -73,6 +73,9 @@ img {
 .randomImg {
   width: 25%;
 }
+.placeholder {
+  color: gray;
+}
 i {
   color: red;
 }

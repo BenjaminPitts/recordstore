@@ -5,7 +5,7 @@
   </head>
   <body>
     <%- include ('../partials/header.ejs') %><br><br>
-<div class='new'><a href='/recordstore/new'>Post New</a><br>
+<div class='new'><a href='/recordstore/new' alt='post new'>Post New</a><br>
 </div>
 
 <div class='container'>
@@ -16,18 +16,19 @@
        }
        let random = albums[(Math.floor(Math.random()*albums.length))]
   %>
-      I'm Feeling Lucky:
+       I'm Feeling Lucky:<br>
        <a href='/recordstore/<%= random.id %>#top'>
-       <img src='<%= random.image %>' class='randomImg' data-toggle='tooltip' title='<%= random.band %>: <%= random.album %>'>
+       <img src='<%= random.image %>' class='randomImg' data-toggle='tooltip' title='<%= random.band %>: <%= random.album %>'
+       alt='<%= random.band %>'>
        </a>
 </div>
     <div class='new'>
-    <a href='/recordstore/metal'>Metal</a>| |<br>
-    <a href='/recordstore/punk'>Punk</a>| |<br>
-    <a href='/recordstore/hardcore'>Hardcore</a>| |<br>
-    <a href='/recordstore/hiphop'>Hip Hop</a>| |<br>
-    <a href='/recordstore/classic'>Classic</a>| |<br>
-    <a href='/recordstore/other'>Other</a><br>
+    <a href='/recordstore/metal' alt='metal'>Metal</a>| |<br>
+    <a href='/recordstore/punk' alt='punk'>Punk</a>| |<br>
+    <a href='/recordstore/hardcore' alt='hardcore'>Hardcore</a>| |<br>
+    <a href='/recordstore/hiphop' alt='hiphop'>Hip Hop</a>| |<br>
+    <a href='/recordstore/classic' alt='classic'>Classic</a>| |<br>
+    <a href='/recordstore/other' alt='other'>Other</a><br>
     </div>
     <br>
     <%- include ('../partials/footer.ejs') %>
