@@ -1,31 +1,25 @@
-<div class='top'>
+<div class='top' id='top'>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-</div>
 <header>
   <div class='main'>
     <div class='new'>
-  <h1>Counter Culture <i>Records</i></h1>
+  <h1><a href='/recordstore' id='ivory'>CounterCulture</a><i>Records</i></h1>
     </div>
-  <div class='new' id='top'>
+  <div class='new'>
   <% if (currentUser) { %>
     Hello, <%= currentUser.username %>
     <form action='/sessions?_method=DELETE' method='POST' class='none'>
-      <input type='submit' value='Log Out' alt='log out'>
+      <input type='submit' value='Log Out' alt='log out' id='out'>
     </form>
 
     <% } else { %>
-      <a href='/users/new#top' alt='sign up'>Sign Up</a>| |<br>
+      <a href='/users/new#top' alt='sign up'>Sign Up</a>| |
       <a href='/sessions/new#top' alt='log in'>Log In</a>
 
   <% } %>
   </div>
-
+  <br>
+</div>
     <!-- unable to get search bar working
     <div class='new'>
       <form action='/recordstore/search' method='GET' class='none'>

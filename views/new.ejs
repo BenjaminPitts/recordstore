@@ -4,7 +4,7 @@
     <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-    <%- include ('../partials/header.ejs') %><br>
+    <%- include ('../partials/header.ejs') %><br><br><br><br><br>
 <div class='container'>
     <form action='/recordstore/' method='POST'>
       Name of Band: <input type='text' name='band' alt='band' required><br>
@@ -23,13 +23,13 @@
       alt='price' required><br>
       Seller: <input type='text' name='seller'
       placeholder='email@example.com' alt='seller' required><br>
-      <input type='submit' value='Post Item' alt='submit'>
+      <input type='submit' value='Post Item' alt='submit' id='post'>
     </form>
 </div><br>
   <nav class='main'>
       <a href='/recordstore#top' alt='top'>Back To Main Page</a>
   </nav>
-<br><br>
+<br><br><br><br><br><br>
     <%- include ('../partials/footer.ejs') %>
   </body>
 </html>

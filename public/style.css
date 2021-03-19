@@ -38,6 +38,7 @@ img {
   font-size: 35px;
   margin: 0;
   padding: 0;
+
 }
 .item {
   display: flex;
@@ -63,12 +64,12 @@ img {
 .top {
   background-image: url(https://i.imgur.com/GV2mcm1.jpg?2);
   background-size: cover;
-  opacity: .8;
+
 }
 .bottom {
     background-image: url(https://i.imgur.com/uhfDwoq.jpg?2);
     background-size: cover;
-    opacity: .8;
+
 }
 .randomImg {
   width: 25%;
@@ -108,8 +109,20 @@ header, footer {
   font-size: 20px;
   margin: 0 auto;
 }
+#ivory {
+  color: ivory;
+}
+#ivory:hover {
+  color: red;
+}
+#out, #delete, #submit, #post {
+  cursor: pointer;
+}
+#ben {
+  font-size: 25px;
+}
 
-@media only screen and (max-width:650px) {
+@media only screen and (max-width:550px) {
   .container {
     flex-direction: column;
   }
@@ -117,6 +130,12 @@ header, footer {
     width: 100%;
   }
   .randomImg {
-    width: 60%;
+    width: 70%;
+  }
+  img {
+    width: 70%;
+  }
+  h1 {
+    font-size: 30px;
   }
 }
