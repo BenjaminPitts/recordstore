@@ -21,6 +21,7 @@ img {
   width: 50%;
   height: auto;
   border: 1px solid gold;
+  max-width: 60%;
 }
 .container {
   display: flex;
@@ -101,6 +102,7 @@ h2, h3{
 span {
   text-align: left;
   font-size: 20px;
+  margin-left: 1rem;
 }
 header, footer {
   display: flex;
@@ -146,5 +148,14 @@ header, footer {
   }
   h1 {
     font-size: 30px;
+  }
+  span {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width:1000px) {
+  .pic {
+    width: 30%;
   }
 }
