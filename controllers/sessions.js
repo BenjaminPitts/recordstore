@@ -10,7 +10,7 @@ sessions.get('/new', (req, res)=>{
   })
 })
 
-//post new login and PW
+//post new login and PW route
 sessions.post('/', (req, res)=>{
   User.findOne({username: req.body.username}, (err, foundUser)=>{
     if (err) {
@@ -29,7 +29,7 @@ sessions.post('/', (req, res)=>{
   })
 })
 
-//quit sessions
+//quit session
 sessions.delete('/', (req, res)=>{
   req.session.destroy(()=>{
     res.redirect('/recordstore')

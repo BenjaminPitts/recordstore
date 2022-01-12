@@ -94,7 +94,7 @@ router.get('/recordstore/other', (req, res)=>{
   })
 })
 
-//new route
+//new page route
 router.get('/recordstore/new', isAuthenticated, (req, res)=>{
   Item.find({}, (err, data)=>{
     res.render('new.ejs',
@@ -103,10 +103,11 @@ router.get('/recordstore/new', isAuthenticated, (req, res)=>{
     tabTitle: 'Post New',
     currentUser: req.session.currentUser
     })
+    //console.log(data)
   })
 })
 
-//show route
+//show page route
 router.get('/recordstore/:id', isAuthenticated, (req, res)=>{
   Item.findById(req.params.id, (err, data)=>{
     res.render(
@@ -119,21 +120,7 @@ router.get('/recordstore/:id', isAuthenticated, (req, res)=>{
   })
 })
 
-//create route
-router.post('/recordstore/', isAuthenticated, (req, res)=>{
-  Item.create(req.body, (err, data)=>{
-    res.redirect('/recordstore/')
-  })
-})
-
-//delete route
-router.delete('/recordstore/:id', (req, res)=>{
-  Item.findByIdAndRemove(req.params.id, (err, data)=>{
-    res.redirect('/recordstore')
-  })
-})
-
-//edit and put routes
+//edit page route
 router.get('/recordstore/:id/edit', (req, res)=>{
   Item.findById(req.params.id, (err, data)=>{
     res.render(
@@ -146,11 +133,28 @@ router.get('/recordstore/:id/edit', (req, res)=>{
     )
   })
 })
+
+//create route
+router.post('/recordstore/', isAuthenticated, (req, res)=>{
+  Item.create(req.body, (err, data)=>{
+    res.redirect('/recordstore/')
+  })
+})
+
+// put route
 router.put('/recordstore/:id', (req, res)=>{
   Item.findByIdAndUpdate(req.params.id, req.body, (err, data)=>{
     res.redirect('/recordstore')
   })
 })
+
+//delete route
+router.delete('/recordstore/:id', (req, res)=>{
+  Item.findByIdAndRemove(req.params.id, (err, data)=>{
+    res.redirect('/recordstore')
+  })
+})
+
 
 //search route--unable to get this working
 // router.get("/recordstore/search", function(req, res) {
