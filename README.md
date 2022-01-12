@@ -6,4 +6,5 @@ This was my first time using databases and servers to create a functional and in
 - `cd recordstore`
 - `npm i -y`
 - `nodemon server.js`
+- view in browser at: http://localhost:3000/recordstore
 - visit live site: [Counter Culture Records](https://recordstore666.herokuapp.com/recordstore)
